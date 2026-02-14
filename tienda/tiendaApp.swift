@@ -12,7 +12,7 @@ import SwiftData
 struct tiendaApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            PersonaModelo.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +25,7 @@ struct tiendaApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PantallaInicio()
         }
         .modelContainer(sharedModelContainer)
     }
